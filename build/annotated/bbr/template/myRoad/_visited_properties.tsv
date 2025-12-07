@@ -1,0 +1,114 @@
+path	@id
+/id	
+/geometry	
+/geometry/type	
+/geometry/coordinates	
+/geometry/bbox	
+/properties	@nest
+/properties/subclass_rules	
+/properties/subclass_rules/between	
+/properties/subclass_rules/value	
+/properties/access_restrictions	
+/properties/access_restrictions/between	
+/properties/access_restrictions/access_type	
+/properties/access_restrictions/when	
+/properties/access_restrictions/when/during	
+/properties/access_restrictions/when/heading	
+/properties/access_restrictions/when/using	
+/properties/access_restrictions/when/recognized	
+/properties/access_restrictions/when/mode	
+/properties/access_restrictions/when/vehicle	
+/properties/access_restrictions/when/vehicle/dimension	
+/properties/access_restrictions/when/vehicle/comparison	
+/properties/access_restrictions/when/vehicle/value	rdf:value
+/properties/access_restrictions/when/vehicle/unit	http://qudt.org/vocab/unit/
+/properties/level	https://w3id.org/ogc/om/hasLevel
+/properties/level_rules	
+/properties/level_rules/between	
+/properties/level_rules/value	
+/properties/theme	
+/properties/type	
+/properties/version	
+/properties/sources	
+/properties/sources/property	
+/properties/sources/dataset	
+/properties/sources/license	
+/properties/sources/record_id	
+/properties/sources/update_time	
+/properties/sources/confidence	
+/properties/names	
+/properties/names/primary	
+/properties/names/common	
+/properties/names/rules	
+/properties/names/rules/side	
+/properties/names/rules/variant	
+/properties/names/rules/language	
+/properties/names/rules/perspectives	
+/properties/names/rules/perspectives/mode	
+/properties/names/rules/perspectives/countries	
+/properties/names/rules/value	
+/properties/subtype	
+/properties/class	
+/properties/destinations	
+/properties/destinations/labels	
+/properties/destinations/labels/value	
+/properties/destinations/labels/type	
+/properties/destinations/symbols	
+/properties/destinations/from_connector_id	
+/properties/destinations/to_segment_id	
+/properties/destinations/to_connector_id	
+/properties/destinations/when	
+/properties/destinations/final_heading	
+/properties/prohibited_transitions	
+/properties/prohibited_transitions/between	
+/properties/prohibited_transitions/sequence	
+/properties/prohibited_transitions/sequence/connector_id	
+/properties/prohibited_transitions/sequence/segment_id	
+/properties/prohibited_transitions/final_heading	
+/properties/prohibited_transitions/when	
+/properties/road_surface	osm:hasSurfaceType
+/properties/road_surface/between	
+/properties/road_surface/value	@id
+/properties/road_flags	
+/properties/road_flags/between	
+/properties/road_flags/values	
+/properties/speed_limits	https://w3id.org/ogc/om/hasSpeedLimit
+/properties/speed_limits/between	
+/properties/speed_limits/min_speed	https://w3id.org/ogc/om/hasMinSpeed
+/properties/speed_limits/min_speed/value	rdf:value
+/properties/speed_limits/min_speed/unit	http://qudt.org/schema/qudt/hasUnit
+/properties/speed_limits/max_speed	https://w3id.org/ogc/om/hasMaxSpeed
+/properties/speed_limits/is_max_speed_variable	https://w3id.org/ogc/om/isMaxSpeedVariable
+/properties/speed_limits/when	https://w3id.org/ogc/om/when
+/properties/width_rules	
+/properties/width_rules/between	
+/properties/width_rules/value	
+/properties/subclass	
+/properties/rail_flags	
+/properties/rail_flags/between	
+/properties/rail_flags/values	
+/properties/connectors	
+/properties/connectors/connector_id	
+/properties/connectors/at	
+/properties/routes	
+/properties/routes/between	
+/properties/routes/name	
+/properties/routes/network	
+/properties/routes/ref	
+/properties/routes/symbol	
+/properties/routes/wikidata	
+/highway	@type
+/oneway	https://example.com/osm/isOneWay
+/surface	https://example.com/osm/hasSurfaceType
+/name	http://www.w3.org/2000/01/rdf-schema#label
+/lanes	https://example.com/osm/hasLaneCount
+/maxspeed	
+/bridge	
+/tunnel	
+/cycleway	
+/sidewalk	
+/access	
+/source	http://purl.org/dc/terms/source
+/properties/pavementConditionIndex	https://example.com/my/namespace/pavementConditionIndex
+/properties/maintenanceZone	https://example.com/my/namespace/maintenanceZone
+/properties/underMaintenance	https://example.com/my/namespace/isUnderMaintenance

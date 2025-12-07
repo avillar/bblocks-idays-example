@@ -1,0 +1,58 @@
+
+
+{
+  "itemIdentifier": "ogc.bbr.template.myRoad",
+  "name": "My Road",
+  "abstract": "An example road schema",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2025-12-07",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "tags": [
+    "templates"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.osm.features.highway",
+    "ogc.overturemaps.schemas.transportation.segment"
+  ],
+  "ldContext": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/context.jsonld",
+  "schema": {
+    "application/yaml": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.yaml",
+    "application/json": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.json"
+  },
+  "sourceSchema": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/schema.yaml",
+  "sourceLdContext": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/context.jsonld",
+  "sourceFiles": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/",
+  "rdfData": [],
+  "validationPassed": false,
+  "testOutputs": "https://github.com/avillar/bblocks-idays-example/blob/master/build/tests/bbr/template/myRoad/",
+  "examples": [
+    {
+      "title": "Sample reoad",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [-3.70379, 40.41678],\n      [-3.70250, 40.41740]\n    ]\n  },\n  \"properties\": {\n    \"highway\": \"motorway\",\n    \"name\": \"A-7 Autov\u00eda del Mediterr\u00e1neo\",\n    \"surface\": \"asphalt\",\n    \"oneway\": \"yes\",\n    \"lanes\": 3,\n    \"maxspeed\": \"120\",\n    \"bridge\": \"no\",\n    \"tunnel\": \"no\",\n    \"source\": \"survey 2024-09\",\n    \"underMaintenance\": false\n  }\n}",
+          "url": "https://avillar.github.io/bblocks-idays-example/build/tests/bbr/template/myRoad/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -3.70379,\n        40.41678\n      ],\n      [\n        -3.7025,\n        40.4174\n      ]\n    ]\n  },\n  \"properties\": {\n    \"highway\": \"motorway\",\n    \"name\": \"A-7 Autov\\u00eda del Mediterr\\u00e1neo\",\n    \"surface\": \"asphalt\",\n    \"oneway\": \"yes\",\n    \"lanes\": 3,\n    \"maxspeed\": \"120\",\n    \"bridge\": \"no\",\n    \"tunnel\": \"no\",\n    \"source\": \"survey 2024-09\",\n    \"underMaintenance\": false\n  }\n}",
+          "url": "https://avillar.github.io/bblocks-idays-example/build/tests/bbr/template/myRoad/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://avillar.github.io/bblocks-idays-example/build/tests/bbr/template/myRoad/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: My example schema\ntype: object\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-osm/build/annotated/osm/features/highway/schema.yaml\nproperties:\n  properties:\n    properties:\n      pavementConditionIndex:\n        type: number\n        minimum: 0\n        maximum: 100\n        x-jsonld-id: https://example.com/my/namespace/pavementConditionIndex\n      maintenanceZone:\n        type: string\n        x-jsonld-id: https://example.com/my/namespace/maintenanceZone\n        x-jsonld-type: '@id'\n        x-jsonld-base: https://example.com/my/namespace/maintenanceZones/\n      underMaintenance:\n        type: boolean\n        x-jsonld-id: https://example.com/my/namespace/isUnderMaintenance\nx-jsonld-prefixes:\n  myNamespace: https://example.com/my/namespace/\n",
+  "gitRepository": "https://github.com/avillar/bblocks-idays-example",
+  "gitPath": "_sources/myRoad"
+}

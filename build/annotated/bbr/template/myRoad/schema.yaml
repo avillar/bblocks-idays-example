@@ -1,0 +1,24 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: My example schema
+type: object
+allOf:
+- $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-osm/build/annotated/osm/features/highway/schema.yaml
+properties:
+  properties:
+    properties:
+      pavementConditionIndex:
+        type: number
+        minimum: 0
+        maximum: 100
+        x-jsonld-id: https://example.com/my/namespace/pavementConditionIndex
+      maintenanceZone:
+        type: string
+        x-jsonld-id: https://example.com/my/namespace/maintenanceZone
+        x-jsonld-type: '@id'
+        x-jsonld-base: https://example.com/my/namespace/maintenanceZones/
+      underMaintenance:
+        type: boolean
+        x-jsonld-id: https://example.com/my/namespace/isUnderMaintenance
+x-jsonld-prefixes:
+  myNamespace: https://example.com/my/namespace/

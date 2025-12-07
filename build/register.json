@@ -1,0 +1,72 @@
+{
+  "name": "My OGC Building Blocks repository",
+  "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
+  "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
+  "modified": "2025-12-07T18:58:02.341292",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"68167baf1c7280295a0aecc42e40ac421e1a4a6d",
+      "shortCommitId": "\"68167b",
+      "date": "2025-12-03T13:13:23+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/avillar/bblocks-idays-example",
+  "gitHubRepository": "https://github.com/avillar/bblocks-idays-example/blob/master/",
+  "baseURL": "https://avillar.github.io/bblocks-idays-example/",
+  "viewerURL": "https://avillar.github.io/bblocks-idays-example/",
+  "validationReport": "https://avillar.github.io/bblocks-idays-example/build/tests/report.html",
+  "validationReportJson": "https://avillar.github.io/bblocks-idays-example/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://ogcincubator.github.io/bblocks-overturemaps/build/register.json",
+    "https://ogcincubator.github.io/bblocks-osm/build/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.bbr.template.myRoad",
+      "name": "My Road",
+      "abstract": "An example road schema",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-01T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2025-12-07",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "tags": [
+        "templates"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.osm.features.highway",
+        "ogc.overturemaps.schemas.transportation.segment"
+      ],
+      "ldContext": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/context.jsonld",
+      "schema": {
+        "application/yaml": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.yaml",
+        "application/json": "https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.json"
+      },
+      "sourceSchema": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/schema.yaml",
+      "sourceLdContext": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/context.jsonld",
+      "sourceFiles": "https://avillar.github.io/bblocks-idays-example/_sources/myRoad/",
+      "rdfData": [],
+      "validationPassed": false,
+      "testOutputs": "https://github.com/avillar/bblocks-idays-example/blob/master/build/tests/bbr/template/myRoad/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://avillar.github.io/bblocks-idays-example/build/generateddocs/markdown/bbr/template/myRoad/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://avillar.github.io/bblocks-idays-example/build/generateddocs/json-full/bbr/template/myRoad/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://avillar.github.io/bblocks-idays-example/bblock/ogc.bbr.template.myRoad"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://avillar.github.io/bblocks-idays-example/build/annotated/_cache"
+}

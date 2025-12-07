@@ -1,0 +1,88 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://avillar.github.io/bblocks-idays-example/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:Nb9b9ab78e26e447a8a2ebf07ef7d7239 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2025-12-07T18:58:04.677760"^^xsd:dateTime ;
+            prov:startedAtTime "2025-12-07T18:58:04.611683"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+                [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:86c90a08b08b2e3df8b0c730b8f78d0f2a3cc73a" ;
+                    rdfs:seeAlso <https://avillar.github.io/bblocks-idays-example/build/register.json> ] ;
+            prov:wasAssociatedWith _:Nb9b9ab78e26e447a8a2ebf07ef7d7239 ] .
+
+<bblocks://ogc.bbr.template.myRoad> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "My Road" ;
+    dct:abstract "An example road schema"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2025-12-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-idays-example/build/generateddocs/markdown/bbr/template/myRoad/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-idays-example/build/generateddocs/json-full/bbr/template/myRoad/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://avillar.github.io/bblocks-idays-example/bblock/ogc.bbr.template.myRoad> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-12-07"^^xsd:date ;
+    skos:inScheme <https://avillar.github.io/bblocks-idays-example/> ;
+    skos:prefLabel "My Road" ;
+    skos:topConceptOf <https://avillar.github.io/bblocks-idays-example/> ;
+    dcat:keyword "templates" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://avillar.github.io/bblocks-idays-example/build/annotated/bbr/template/myRoad/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.osm.features.highway>,
+        <bblocks://ogc.overturemaps.schemas.transportation.segment> ;
+    bblocks:hasSourceJsonLdContext <https://avillar.github.io/bblocks-idays-example/_sources/myRoad/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
+
+<https://avillar.github.io/bblocks-idays-example/> a skos:ConceptScheme,
+        dcat:Catalog ;
+    rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
+    dct:abstract """This is an example text for the abstract. It should be short and to the point.
+A "Tell me more" link will appear if there is an additional description with a longer explanation.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
+including [links](https://google.es).
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2025-12-07T18:58:02.341292"^^xsd:dateTime ;
+    owl:imports <https://ogcincubator.github.io/bblocks-osm/build/register.json>,
+        <https://ogcincubator.github.io/bblocks-overturemaps/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.bbr.template.myRoad> ;
+    skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
+    foaf:homepage <https://avillar.github.io/bblocks-idays-example/> ;
+    bblocks:hasValidationReport <https://avillar.github.io/bblocks-idays-example/build/tests/report.html> .
+
+_:Nb9b9ab78e26e447a8a2ebf07ef7d7239 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.3" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

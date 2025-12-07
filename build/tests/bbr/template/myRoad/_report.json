@@ -1,0 +1,72 @@
+{
+  "title": "Validation report for ogc.bbr.template.myRoad - My Road",
+  "bblockName": "My Road",
+  "bblockId": "ogc.bbr.template.myRoad",
+  "generated": "2025-12-07T18:58:04.596542+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/bbr/template/myRoad/example_1_1.json",
+        "url": "https://avillar.github.io/bblocks-idays-example/build/tests/bbr/template/myRoad/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'highway' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'highway' is a required property\n\nFailed validating 'required' in schema['allOf'][1]:\n    {'$comment': 'Notes:\\n'\n                 '- Enumerations reflect commonly documented values on the '\n                 'OSM wiki (Map features + Key:highway).\\n'\n                 '- Many specialized keys (e.g., lanes:forward/backward, '\n                 'maxspeed:conditional) are omitted for simplicity.\\n'\n                 '- Consider replacing tight enums with patterns or '\n                 'merging editor presets for broader coverage.\\n',\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': \"Proto schema for validating a subset of OSM 'highway' \"\n                    'tags on ways/relations/nodes.',\n     'oneOf': [{'properties': {'highway': {'const': 'motorway',\n                                           'x-jsonld-id': '@type',\n                                           'x-jsonld-type': '@id'},\n                               'oneway': {'description': 'Motorways are '\n                                                         'typically '\n                                                         'one-way per '\n                                                         'carriageway.',\n                                          'enum': ['yes', True],\n                                          'x-jsonld-id': 'https://example.com/osm/isOneWay'}}},\n               {'properties': {'highway': {'const': 'steps',\n                                           'x-jsonld-id': '@type',\n                                           'x-jsonld-type': '@id'},\n                               'surface': {'description': 'Common surfaces '\n                                                          'for steps.',\n                                           'enum': ['concrete',\n                                                    'stone',\n                                                    'wood'],\n                                           'x-jsonld-base': 'https://example.com/osm/surfaces/',\n                                           'x-jsonld-id': 'https://example.com/osm/hasSurfaceType',\n                                           'x-jsonld-type': '@id'}}},\n               {'not': {'properties': {'highway': {'enum': ['motorway',\n                                                            'steps']}}}}],\n     'properties': {'access': {'enum': ['yes',\n                                        'no',\n                                        'private',\n                                        'destination',\n                                        'permissive',\n                                        'customers',\n                                        'delivery'],\n                               'type': 'string'},\n                    'bridge': {'enum': ['yes', 'no'], 'type': 'string'},\n                    'cycleway': {'enum': ['lane',\n                                          'track',\n                                          'opposite_lane',\n                                          'opposite_track',\n                                          'share_busway',\n                                          'shared',\n                                          'no'],\n                                 'type': 'string'},\n                    'highway': {'description': 'Main classifier for roads, '\n                                               'paths, and road-related '\n                                               'features.',\n                                'enum': ['motorway',\n                                         'trunk',\n                                         'primary',\n                                         'secondary',\n                                         'tertiary',\n                                         'unclassified',\n                                         'residential',\n                                         'service',\n                                         'motorway_link',\n                                         'trunk_link',\n                                         'primary_link',\n                                         'secondary_link',\n                                         'tertiary_link',\n                                         'living_street',\n                                         'pedestrian',\n                                         'busway',\n                                         'bus_guideway',\n                                         'bus_stop',\n                                         'bus_station',\n                                         'raceway',\n                                         'footway',\n                                         'path',\n                                         'track',\n                                         'cycleway',\n                                         'bridleway',\n                                         'steps',\n                                         'crossing',\n                                         'road',\n                                         'construction'],\n                                'type': 'string',\n                                'x-jsonld-extra-terms': {'bridleway': 'https://example.com/osm/Bridleway',\n                                                         'bus_guideway': 'https://example.com/osm/BusGuideway',\n                                                         'bus_station': 'https://example.com/osm/BusStation',\n                                                         'bus_stop': 'https://example.com/osm/BusStop',\n                                                         'busway': 'https://example.com/osm/Busway',\n                                                         'construction': 'https://example.com/osm/Construction',\n                                                         'crossing': 'https://example.com/osm/Crossing',\n                                                         'cycleway': 'https://example.com/osm/Cycleway',\n                                                         'footway': 'https://example.com/osm/Footway',\n                                                         'living_street': 'https://example.com/osm/LivingStreet',\n                                                         'motorway': 'https://example.com/osm/Motorway',\n                                                         'motorwayLink': 'https://example.com/osm/MotorwayLink',\n                                                         'path': 'https://example.com/osm/Path',\n                                                         'pedestrian': 'https://example.com/osm/Pedestrian',\n                                                         'primary': 'https://example.com/osm/Primary',\n                                                         'primaryLink': 'https://example.com/osm/PrimaryLink',\n                                                         'raceway': 'https://example.com/osm/Raceway',\n                                                         'residential': 'https://example.com/osm/Residential',\n                                                         'road': 'https://example.com/osm/Road',\n                                                         'secondary': 'https://example.com/osm/Secondary',\n                                                         'secondaryLink': 'https://example.com/osm/SecondaryLink',\n                                                         'service': 'https://example.com/osm/Service',\n                                                         'steps': 'https://example.com/osm/Steps',\n                                                         'tertiary': 'https://example.com/osm/Tertiary',\n                                                         'tertiaryLink': 'https://example.com/osm/TertiaryLink',\n                                                         'track': 'https://example.com/osm/Track',\n                                                         'trunk': 'https://example.com/osm/Trunk',\n                                                         'trunkLink': 'https://example.com/osm/TrunkLink',\n                                                         'unclassified': 'https://example.com/osm/Unclassified'},\n                                'x-jsonld-id': '@type',\n                                'x-jsonld-type': '@id'},\n                    'lanes': {'description': 'Number of marked lanes.',\n                              'minimum': 1,\n                              'type': 'integer',\n                              'x-jsonld-id': 'https://example.com/osm/hasLaneCount'},\n                    'maxspeed': {'description': 'Posted or implicit max '\n                                                'speed.',\n                                 'pattern': '^(\\\\d+\\\\s?(km/h|mph)?|[A-Z]{2}:[A-Za-z0-9_\\\\-]+)$',\n                                 'type': 'string'},\n                    'name': {'description': 'Human-readable street/path '\n                                            'name.',\n                             'type': 'string',\n                             'x-jsonld-id': 'http://www.w3.org/2000/01/rdf-schema#label'},\n                    'oneway': {'description': 'One-way traffic indicator.',\n                               'enum': ['yes', 'no', '-1', True, False],\n                               'type': ['string', 'boolean'],\n                               'x-jsonld-id': 'https://example.com/osm/isOneWay'},\n                    'sidewalk': {'enum': ['both',\n                                          'left',\n                                          'right',\n                                          'separate',\n                                          'no'],\n                                 'type': 'string'},\n                    'source': {'description': 'Provenance for tags.',\n                               'type': 'string',\n                               'x-jsonld-id': 'http://purl.org/dc/terms/source'},\n                    'surface': {'description': 'Physical surface type.',\n                                'enum': ['asphalt',\n                                         'concrete',\n                                         'paved',\n                                         'unpaved',\n                                         'gravel',\n                                         'compacted',\n                                         'dirt',\n                                         'ground',\n                                         'grass',\n                                         'cobblestone',\n                                         'sett',\n                                         'stone',\n                                         'wood'],\n                                'type': 'string',\n                                'x-jsonld-base': 'https://example.com/osm/surfaces/',\n                                'x-jsonld-id': 'https://example.com/osm/hasSurfaceType',\n                                'x-jsonld-type': '@id'},\n                    'tunnel': {'enum': ['yes', 'no'], 'type': 'string'}},\n     'required': ['highway'],\n     'title': 'OpenStreetMap Highway Tag Collection',\n     'type': 'object',\n     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',\n                           'osm': 'https://example.com/osm/',\n                           'rdfs': 'http://www.w3.org/2000/01/rdf-schema#'}}\n\nOn instance:\n    {'geometry': {'coordinates': [[-3.70379, 40.41678], [-3.7025, 40.4174]],\n                  'type': 'LineString'},\n     'properties': {'bridge': 'no',\n                    'highway': 'motorway',\n                    'lanes': 3,\n                    'maxspeed': '120',\n                    'name': 'A-7 Autov\u00eda del Mediterr\u00e1neo',\n                    'oneway': 'yes',\n                    'source': 'survey 2024-09',\n                    'surface': 'asphalt',\n                    'tunnel': 'no',\n                    'underMaintenance': False},\n     'type': 'Feature'}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}

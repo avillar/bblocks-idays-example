@@ -1,0 +1,320 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Building Blocks validation report</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .entry-message {
+                white-space: pre-wrap;
+                font-size: 80%;
+                line-height: 1.1;
+            }
+            *[data-bs-toggle] .caret {
+                display: inline-block;
+                transform: rotate(90deg);
+                transition: transform 0.25s;
+            }
+            *[data-bs-toggle].collapsed .caret {
+                transform: rotate(0deg);
+            }
+            .highlighted {
+                animation: highlight-border 3500ms ease-out;
+            }
+            .highlighted h2 button {
+                animation: highlight 3500ms ease-out;
+            }
+            @keyframes highlight {
+                0% {
+                    background: #ffff90;
+                }
+                100% {
+                    background: var(--bs-accordion-active-bg);
+                }
+            }
+            @keyframes highlight-border {
+                0% {
+                    border-color: red;
+                    border-width: 2px;
+                }
+                100% {
+                    border-color: var(--bs-accordion-border-color);
+                    border-width: var(--bs-accordion-border-width);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Building blocks validation report</h1>
+            <small class="datetime">Generated at 2025-12-07T18:58:04.610943+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 0 / 1 (0%)
+                </p>
+            <div class="text-end small" id="expand-collapse">
+                <a href="#" class="expand-all">Expand all</a>
+                <a href="#" class="collapse-all">Collapse all</a>
+            </div>
+                <div class="accordion mt-2" id="bblock-reports">
+                        <div class="accordion-item bblock-report" data-bblock-id="ogc.bbr.template.myRoad" id="bblock-ogc.bbr.template.myRoad">
+                            <h2 class="accordion-header bblock-title">
+                                <button class="accordion-button " type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-ogc\.bbr\.template\.myRoad">
+                                    <div class="flex-fill">
+                                        My Road
+                                        <small class="ms-2 bblock-id">ogc.bbr.template.myRoad</small>
+                                    </div>
+
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (0% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.bbr.template.myRoad">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 0 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item ">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-1"
+                                                            aria-expanded="false" aria-controls="uid-1"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="bbr/template/myRoad/example_1_1.json" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-1">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files text-danger">**Empty** output Turtle example_1_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;highway&#x27; is a required property
+
+Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][1]:
+    {&#x27;$comment&#x27;: &#x27;Notes:\n&#x27;
+                 &#x27;- Enumerations reflect commonly documented values on the &#x27;
+                 &#x27;OSM wiki (Map features + Key:highway).\n&#x27;
+                 &#x27;- Many specialized keys (e.g., lanes:forward/backward, &#x27;
+                 &#x27;maxspeed:conditional) are omitted for simplicity.\n&#x27;
+                 &#x27;- Consider replacing tight enums with patterns or &#x27;
+                 &#x27;merging editor presets for broader coverage.\n&#x27;,
+     &#x27;$schema&#x27;: &#x27;https://json-schema.org/draft/2020-12/schema&#x27;,
+     &#x27;description&#x27;: &quot;Proto schema for validating a subset of OSM &#x27;highway&#x27; &quot;
+                    &#x27;tags on ways/relations/nodes.&#x27;,
+     &#x27;oneOf&#x27;: [{&#x27;properties&#x27;: {&#x27;highway&#x27;: {&#x27;const&#x27;: &#x27;motorway&#x27;,
+                                           &#x27;x-jsonld-id&#x27;: &#x27;@type&#x27;,
+                                           &#x27;x-jsonld-type&#x27;: &#x27;@id&#x27;},
+                               &#x27;oneway&#x27;: {&#x27;description&#x27;: &#x27;Motorways are &#x27;
+                                                         &#x27;typically &#x27;
+                                                         &#x27;one-way per &#x27;
+                                                         &#x27;carriageway.&#x27;,
+                                          &#x27;enum&#x27;: [&#x27;yes&#x27;, True],
+                                          &#x27;x-jsonld-id&#x27;: &#x27;https://example.com/osm/isOneWay&#x27;}}},
+               {&#x27;properties&#x27;: {&#x27;highway&#x27;: {&#x27;const&#x27;: &#x27;steps&#x27;,
+                                           &#x27;x-jsonld-id&#x27;: &#x27;@type&#x27;,
+                                           &#x27;x-jsonld-type&#x27;: &#x27;@id&#x27;},
+                               &#x27;surface&#x27;: {&#x27;description&#x27;: &#x27;Common surfaces &#x27;
+                                                          &#x27;for steps.&#x27;,
+                                           &#x27;enum&#x27;: [&#x27;concrete&#x27;,
+                                                    &#x27;stone&#x27;,
+                                                    &#x27;wood&#x27;],
+                                           &#x27;x-jsonld-base&#x27;: &#x27;https://example.com/osm/surfaces/&#x27;,
+                                           &#x27;x-jsonld-id&#x27;: &#x27;https://example.com/osm/hasSurfaceType&#x27;,
+                                           &#x27;x-jsonld-type&#x27;: &#x27;@id&#x27;}}},
+               {&#x27;not&#x27;: {&#x27;properties&#x27;: {&#x27;highway&#x27;: {&#x27;enum&#x27;: [&#x27;motorway&#x27;,
+                                                            &#x27;steps&#x27;]}}}}],
+     &#x27;properties&#x27;: {&#x27;access&#x27;: {&#x27;enum&#x27;: [&#x27;yes&#x27;,
+                                        &#x27;no&#x27;,
+                                        &#x27;private&#x27;,
+                                        &#x27;destination&#x27;,
+                                        &#x27;permissive&#x27;,
+                                        &#x27;customers&#x27;,
+                                        &#x27;delivery&#x27;],
+                               &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;bridge&#x27;: {&#x27;enum&#x27;: [&#x27;yes&#x27;, &#x27;no&#x27;], &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;cycleway&#x27;: {&#x27;enum&#x27;: [&#x27;lane&#x27;,
+                                          &#x27;track&#x27;,
+                                          &#x27;opposite_lane&#x27;,
+                                          &#x27;opposite_track&#x27;,
+                                          &#x27;share_busway&#x27;,
+                                          &#x27;shared&#x27;,
+                                          &#x27;no&#x27;],
+                                 &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;highway&#x27;: {&#x27;description&#x27;: &#x27;Main classifier for roads, &#x27;
+                                               &#x27;paths, and road-related &#x27;
+                                               &#x27;features.&#x27;,
+                                &#x27;enum&#x27;: [&#x27;motorway&#x27;,
+                                         &#x27;trunk&#x27;,
+                                         &#x27;primary&#x27;,
+                                         &#x27;secondary&#x27;,
+                                         &#x27;tertiary&#x27;,
+                                         &#x27;unclassified&#x27;,
+                                         &#x27;residential&#x27;,
+                                         &#x27;service&#x27;,
+                                         &#x27;motorway_link&#x27;,
+                                         &#x27;trunk_link&#x27;,
+                                         &#x27;primary_link&#x27;,
+                                         &#x27;secondary_link&#x27;,
+                                         &#x27;tertiary_link&#x27;,
+                                         &#x27;living_street&#x27;,
+                                         &#x27;pedestrian&#x27;,
+                                         &#x27;busway&#x27;,
+                                         &#x27;bus_guideway&#x27;,
+                                         &#x27;bus_stop&#x27;,
+                                         &#x27;bus_station&#x27;,
+                                         &#x27;raceway&#x27;,
+                                         &#x27;footway&#x27;,
+                                         &#x27;path&#x27;,
+                                         &#x27;track&#x27;,
+                                         &#x27;cycleway&#x27;,
+                                         &#x27;bridleway&#x27;,
+                                         &#x27;steps&#x27;,
+                                         &#x27;crossing&#x27;,
+                                         &#x27;road&#x27;,
+                                         &#x27;construction&#x27;],
+                                &#x27;type&#x27;: &#x27;string&#x27;,
+                                &#x27;x-jsonld-extra-terms&#x27;: {&#x27;bridleway&#x27;: &#x27;https://example.com/osm/Bridleway&#x27;,
+                                                         &#x27;bus_guideway&#x27;: &#x27;https://example.com/osm/BusGuideway&#x27;,
+                                                         &#x27;bus_station&#x27;: &#x27;https://example.com/osm/BusStation&#x27;,
+                                                         &#x27;bus_stop&#x27;: &#x27;https://example.com/osm/BusStop&#x27;,
+                                                         &#x27;busway&#x27;: &#x27;https://example.com/osm/Busway&#x27;,
+                                                         &#x27;construction&#x27;: &#x27;https://example.com/osm/Construction&#x27;,
+                                                         &#x27;crossing&#x27;: &#x27;https://example.com/osm/Crossing&#x27;,
+                                                         &#x27;cycleway&#x27;: &#x27;https://example.com/osm/Cycleway&#x27;,
+                                                         &#x27;footway&#x27;: &#x27;https://example.com/osm/Footway&#x27;,
+                                                         &#x27;living_street&#x27;: &#x27;https://example.com/osm/LivingStreet&#x27;,
+                                                         &#x27;motorway&#x27;: &#x27;https://example.com/osm/Motorway&#x27;,
+                                                         &#x27;motorwayLink&#x27;: &#x27;https://example.com/osm/MotorwayLink&#x27;,
+                                                         &#x27;path&#x27;: &#x27;https://example.com/osm/Path&#x27;,
+                                                         &#x27;pedestrian&#x27;: &#x27;https://example.com/osm/Pedestrian&#x27;,
+                                                         &#x27;primary&#x27;: &#x27;https://example.com/osm/Primary&#x27;,
+                                                         &#x27;primaryLink&#x27;: &#x27;https://example.com/osm/PrimaryLink&#x27;,
+                                                         &#x27;raceway&#x27;: &#x27;https://example.com/osm/Raceway&#x27;,
+                                                         &#x27;residential&#x27;: &#x27;https://example.com/osm/Residential&#x27;,
+                                                         &#x27;road&#x27;: &#x27;https://example.com/osm/Road&#x27;,
+                                                         &#x27;secondary&#x27;: &#x27;https://example.com/osm/Secondary&#x27;,
+                                                         &#x27;secondaryLink&#x27;: &#x27;https://example.com/osm/SecondaryLink&#x27;,
+                                                         &#x27;service&#x27;: &#x27;https://example.com/osm/Service&#x27;,
+                                                         &#x27;steps&#x27;: &#x27;https://example.com/osm/Steps&#x27;,
+                                                         &#x27;tertiary&#x27;: &#x27;https://example.com/osm/Tertiary&#x27;,
+                                                         &#x27;tertiaryLink&#x27;: &#x27;https://example.com/osm/TertiaryLink&#x27;,
+                                                         &#x27;track&#x27;: &#x27;https://example.com/osm/Track&#x27;,
+                                                         &#x27;trunk&#x27;: &#x27;https://example.com/osm/Trunk&#x27;,
+                                                         &#x27;trunkLink&#x27;: &#x27;https://example.com/osm/TrunkLink&#x27;,
+                                                         &#x27;unclassified&#x27;: &#x27;https://example.com/osm/Unclassified&#x27;},
+                                &#x27;x-jsonld-id&#x27;: &#x27;@type&#x27;,
+                                &#x27;x-jsonld-type&#x27;: &#x27;@id&#x27;},
+                    &#x27;lanes&#x27;: {&#x27;description&#x27;: &#x27;Number of marked lanes.&#x27;,
+                              &#x27;minimum&#x27;: 1,
+                              &#x27;type&#x27;: &#x27;integer&#x27;,
+                              &#x27;x-jsonld-id&#x27;: &#x27;https://example.com/osm/hasLaneCount&#x27;},
+                    &#x27;maxspeed&#x27;: {&#x27;description&#x27;: &#x27;Posted or implicit max &#x27;
+                                                &#x27;speed.&#x27;,
+                                 &#x27;pattern&#x27;: &#x27;^(\\d+\\s?(km/h|mph)?|[A-Z]{2}:[A-Za-z0-9_\\-]+)$&#x27;,
+                                 &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;name&#x27;: {&#x27;description&#x27;: &#x27;Human-readable street/path &#x27;
+                                            &#x27;name.&#x27;,
+                             &#x27;type&#x27;: &#x27;string&#x27;,
+                             &#x27;x-jsonld-id&#x27;: &#x27;http://www.w3.org/2000/01/rdf-schema#label&#x27;},
+                    &#x27;oneway&#x27;: {&#x27;description&#x27;: &#x27;One-way traffic indicator.&#x27;,
+                               &#x27;enum&#x27;: [&#x27;yes&#x27;, &#x27;no&#x27;, &#x27;-1&#x27;, True, False],
+                               &#x27;type&#x27;: [&#x27;string&#x27;, &#x27;boolean&#x27;],
+                               &#x27;x-jsonld-id&#x27;: &#x27;https://example.com/osm/isOneWay&#x27;},
+                    &#x27;sidewalk&#x27;: {&#x27;enum&#x27;: [&#x27;both&#x27;,
+                                          &#x27;left&#x27;,
+                                          &#x27;right&#x27;,
+                                          &#x27;separate&#x27;,
+                                          &#x27;no&#x27;],
+                                 &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;source&#x27;: {&#x27;description&#x27;: &#x27;Provenance for tags.&#x27;,
+                               &#x27;type&#x27;: &#x27;string&#x27;,
+                               &#x27;x-jsonld-id&#x27;: &#x27;http://purl.org/dc/terms/source&#x27;},
+                    &#x27;surface&#x27;: {&#x27;description&#x27;: &#x27;Physical surface type.&#x27;,
+                                &#x27;enum&#x27;: [&#x27;asphalt&#x27;,
+                                         &#x27;concrete&#x27;,
+                                         &#x27;paved&#x27;,
+                                         &#x27;unpaved&#x27;,
+                                         &#x27;gravel&#x27;,
+                                         &#x27;compacted&#x27;,
+                                         &#x27;dirt&#x27;,
+                                         &#x27;ground&#x27;,
+                                         &#x27;grass&#x27;,
+                                         &#x27;cobblestone&#x27;,
+                                         &#x27;sett&#x27;,
+                                         &#x27;stone&#x27;,
+                                         &#x27;wood&#x27;],
+                                &#x27;type&#x27;: &#x27;string&#x27;,
+                                &#x27;x-jsonld-base&#x27;: &#x27;https://example.com/osm/surfaces/&#x27;,
+                                &#x27;x-jsonld-id&#x27;: &#x27;https://example.com/osm/hasSurfaceType&#x27;,
+                                &#x27;x-jsonld-type&#x27;: &#x27;@id&#x27;},
+                    &#x27;tunnel&#x27;: {&#x27;enum&#x27;: [&#x27;yes&#x27;, &#x27;no&#x27;], &#x27;type&#x27;: &#x27;string&#x27;}},
+     &#x27;required&#x27;: [&#x27;highway&#x27;],
+     &#x27;title&#x27;: &#x27;OpenStreetMap Highway Tag Collection&#x27;,
+     &#x27;type&#x27;: &#x27;object&#x27;,
+     &#x27;x-jsonld-prefixes&#x27;: {&#x27;dct&#x27;: &#x27;http://purl.org/dc/terms/&#x27;,
+                           &#x27;osm&#x27;: &#x27;https://example.com/osm/&#x27;,
+                           &#x27;rdfs&#x27;: &#x27;http://www.w3.org/2000/01/rdf-schema#&#x27;}}
+
+On instance:
+    {&#x27;geometry&#x27;: {&#x27;coordinates&#x27;: [[-3.70379, 40.41678], [-3.7025, 40.4174]],
+                  &#x27;type&#x27;: &#x27;LineString&#x27;},
+     &#x27;properties&#x27;: {&#x27;bridge&#x27;: &#x27;no&#x27;,
+                    &#x27;highway&#x27;: &#x27;motorway&#x27;,
+                    &#x27;lanes&#x27;: 3,
+                    &#x27;maxspeed&#x27;: &#x27;120&#x27;,
+                    &#x27;name&#x27;: &#x27;A-7 Autovía del Mediterráneo&#x27;,
+                    &#x27;oneway&#x27;: &#x27;yes&#x27;,
+                    &#x27;source&#x27;: &#x27;survey 2024-09&#x27;,
+                    &#x27;surface&#x27;: &#x27;asphalt&#x27;,
+                    &#x27;tunnel&#x27;: &#x27;no&#x27;,
+                    &#x27;underMaintenance&#x27;: False},
+     &#x27;type&#x27;: &#x27;Feature&#x27;}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', () => {
+                const accordionEntries = [...document.querySelectorAll('#bblock-reports .accordion-collapse')];
+                document.querySelector('#expand-collapse').addEventListener('click', ev => {
+                    ev.preventDefault();
+                    if (ev.target.matches('.expand-all')) {
+                        accordionEntries.forEach(e => e.classList.add('show'));
+                    } else if (ev.target.matches('.collapse-all')) {
+                        accordionEntries.forEach(e => e.classList.remove('show'));
+                    }
+                });
+                if (location.hash.startsWith('#bblock-')) {
+                    const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
+                    if (highlight) {
+                        highlight.querySelector('.accordion-collapse').classList.add('show');
+                        highlight.classList.add('highlighted');
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
