@@ -1,0 +1,27 @@
+examples:
+  - title: Sample reoad
+    snippets:
+      - language: json
+        code: |-
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [-3.70379, 40.41678],
+                [-3.70250, 40.41740]
+              ]
+            },
+            "properties": {
+              "highway": "motorway",
+              "name": "A-7 Autovía del Mediterráneo",
+              "surface": "asphalt",
+              "oneway": "yes",
+              "lanes": 3,
+              "maxspeed": "120",
+              "bridge": "no",
+              "tunnel": "no",
+              "source": "survey 2024-09",
+              "underMaintenance": false
+            }
+          }

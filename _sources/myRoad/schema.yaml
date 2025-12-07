@@ -1,0 +1,17 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: My example schema
+type: object
+allOf:
+  - $ref: bblocks://ogc.overturemaps.schemas.transportation.segment
+  - $ref: bblocks://ogc.osm.features.highway
+properties:
+  properties:
+    properties:
+      pavementConditionIndex:
+        type: number
+        minimum: 0
+        maximum: 100
+      maintenanceZone:
+        type: string
+      underMaintenance:
+        type: boolean

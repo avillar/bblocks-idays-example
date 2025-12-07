@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "myNamespace": "https://example.com/my/namespace/",
+    "pavementConditionIndex": "myNamespace:pavementConditionIndex",
+    "maintenanceZone": {
+      "@id": "myNamespace:maintenanceZone",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://example.com/my/namespace/maintenanceZones/"
+      }
+    },
+    "underMaintenance": "myNamespace:isUnderMaintenance"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "My Road",
+  "abstract": "An example road schema",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2025-12-01",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "tags": ["templates"]
+}

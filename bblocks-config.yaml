@@ -17,6 +17,8 @@ identifier-prefix: ogc.bbr.template.
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
+  - https://ogcincubator.github.io/bblocks-overturemaps/build/register.json
+  - https://ogcincubator.github.io/bblocks-osm/build/register.json
 
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
 # version
